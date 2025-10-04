@@ -14,9 +14,10 @@ func SumAll(allNumbers ...[]int) (sum []int) {
 	return
 }
 
-func SumAllTails(allTails ...[]int) (sum []int) {
-	for _, tails := range allTails {
-		sum = append(sum, Sum(tails[1:]))
+func SumAllTails(allNumbers ...[]int) (sum []int) {
+	for _, numbers := range allNumbers {
+		tail := numbers[1:]
+		sum = append(sum, Sum(tail))
 	}
 	return
 }
