@@ -6,3 +6,10 @@ func Sum(numbers []int) (sum int) {
 	}
 	return
 }
+
+func SumAll(allNumbers ...[]int) (result []int) {
+	for _, numbers := range allNumbers {
+		result = append(result, Sum(numbers))
+	}
+	return
+}
