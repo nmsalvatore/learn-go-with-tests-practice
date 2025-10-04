@@ -7,9 +7,16 @@ func Sum(numbers []int) (sum int) {
 	return
 }
 
-func SumAll(allNumbers ...[]int) (result []int) {
+func SumAll(allNumbers ...[]int) (sum []int) {
 	for _, numbers := range allNumbers {
-		result = append(result, Sum(numbers))
+		sum = append(sum, Sum(numbers))
+	}
+	return
+}
+
+func SumAllTails(allTails ...[]int) (sum []int) {
+	for _, tails := range allTails {
+		sum = append(sum, Sum(tails[1:]))
 	}
 	return
 }
